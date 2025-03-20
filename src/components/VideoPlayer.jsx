@@ -7,7 +7,7 @@ const VideoPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <div className="relative w-full max-w-xl mx-auto py-6">
+    <div className="relative w-full max-w-2xl mx-auto py-6">
       {!isPlaying ? (
         <div className="relative cursor-pointer group" onClick={() => setIsPlaying(true)}>
           {/* Thumbnail (Replace with an actual image) */}

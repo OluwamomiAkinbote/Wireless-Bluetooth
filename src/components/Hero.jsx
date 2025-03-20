@@ -21,7 +21,7 @@ const Hero = () => {
         Hands-Free Call Noise Reduction
         </h1>
         <p className="mt-4 text-lg text-gray-300">
-        Built-in HD microphone with intelligent noise reduction delivers clear, real-time voice quality, ideal for work or travel.
+        Enjoy crystal-clear conversations with advanced noise reduction technology..
         </p>
 
         {/* Call to Action Buttons */}

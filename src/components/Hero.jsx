@@ -1,5 +1,5 @@
 import React from "react";
-import Image1 from "../assets/Bluetooth/image-7.png";
+import Image1 from "../assets/image-7.png";
 
 const Hero = () => {
   return (

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Play } from "lucide-react";
-import sampleVideo from "../assets/Bluetooth/video 4.mp4"; 
+import sampleVideo from "../assets/Bluetooth/video-4.mp4"; 
 import thumbnail from "../assets/Bluetooth/image-2.png";
 
 const VideoPlayer = () => {

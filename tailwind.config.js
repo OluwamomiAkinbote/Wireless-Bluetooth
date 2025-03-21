@@ -1,3 +1,4 @@
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -5,7 +6,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}", // Scan all JSX/TSX files in src
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        barlow: ["Barlow Condensed", "sans-serif"],
+        openSans: ["Open Sans", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };

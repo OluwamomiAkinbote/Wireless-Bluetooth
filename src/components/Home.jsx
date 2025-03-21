@@ -4,6 +4,7 @@ import Hero from "./Hero";
 import VideoPlayer from "./VideoPlayer";
 import HeadsetFeature from "./HeadsetFeature";
 import ContactForm from "./ContactForm";
+import Packages from "./Packages";
 
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
       <Hero />
       <VideoPlayer />
       <HeadsetFeature />
+      <Packages />
       <ContactForm />
 
     </div>

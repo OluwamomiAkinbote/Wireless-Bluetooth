@@ -10,7 +10,7 @@ const ContactForm = () => {
   }
 
   return (
-    <div className="max-w-lg mx-auto p-6 bg-gradient-to-r from-gray-900 to-black text-white shadow-lg rounded-lg border border-gray-700">
+    <div id="contact" className="max-w-3xl mx-auto p-6 bg-gradient-to-r from-gray-900 to-black text-white shadow-lg rounded-lg border border-gray-700">
       <h2 className="text-xl font-semibold text-center mb-4">Place Your Order</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         {/* Full Name */}

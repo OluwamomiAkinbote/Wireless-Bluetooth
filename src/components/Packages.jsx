@@ -14,7 +14,7 @@ const Packages = () => {
       highlight: false,
       image: Package1,
       features: [
-        { icon: <FaShippingFast />, text: "Free Shipping" },
+        { icon: <FaShippingFast />, text: "Free Delivery" },
         { icon: <FaGift />, text: "Free Gift" },
         { icon: <FaShieldAlt />, text: "6 Months Warranty" },
         { icon: <FaUndo />, text: "Easy Returns" },
@@ -55,47 +55,46 @@ const Packages = () => {
   };
 
   return (
-    <section id="packages" className="py-10 px-4 md:px-8 bg-gradient-to-r from-gray-900 to-black">
-      <h2 className="text-2xl md:text-4xl font-bold text-white mb-8 text-center flex items-center justify-center gap-3 mb-">
-        <FaCheckCircle className="text-yellow-400 text-3xl md:text-4xl" />
+    <section id="packages" className="py-10 px-4 md:px-8 mb-8">
+      <h2 className="text-2xl md:text-4xl font-bold text-white mb-8 text-center flex items-center justify-center gap-3">
+        <FaCheckCircle className="text-yellow-500 text-3xl md:text-4xl" />
         Choose Your Package
       </h2>
-
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {packages.map((pkg, index) => (
           <div
             key={index}
-            className={`relative bg-gray-800 p-4 md:p-8 rounded-xl shadow-lg transition transform duration-300 
-            hover:shadow-2xl hover:scale-105 text-white ${pkg.highlight ? "border-2 border-yellow-400" : ""}`}
+            className={`relative bg-gray-800 p-6 md:p-8 rounded-xl shadow-md text-white 
+            ${pkg.highlight ? "border-2 border-yellow-500" : ""}`}
           >
             {pkg.highlight && (
-              <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-black px-4 py-1 rounded-full flex items-center gap-2">
+              <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-yellow-500 text-black px-4 py-1 rounded-full flex items-center gap-2">
                 <FaStar className="text-lg" />
                 <span className="text-sm font-semibold">Most Purchased</span>
               </div>
             )}
 
             {/* Package Image */}
-            <img src={pkg.image} alt={pkg.name} className="w-full h-36 md:h-52 object-cover rounded-lg mb-4" />
+            <img src={pkg.image} alt={pkg.name} className="w-full h-36 md:h-48 object-cover rounded-lg mb-4" />
 
             {/* Package Name & Subheading */}
             <div className="text-center">
-              <h3 className="text-lg md:text-2xl font-semibold">{pkg.name}</h3>
+              <h3 className="text-lg md:text-2xl font-semibold text-white">{pkg.name}</h3>
               <p className="text-sm md:text-lg text-gray-300">{pkg.subheading}</p>
             </div>
 
             {/* Pricing */}
             <div className="text-left mt-4">
-              <span className="text-xl md:text-3xl font-bold text-blue-400">{pkg.price}</span>
-              <span className="text-gray-400 line-through ml-2 md:ml-3 text-base md:text-xl">{pkg.slashPrice}</span>
+              <span className="text-xl md:text-3xl font-bold text-yellow-500">{pkg.price}</span>
+              <span className="text-gray-400 line-through ml-2 md:ml-3 text-base md:text-lg">{pkg.slashPrice}</span>
             </div>
 
             {/* Features List */}
             <ul className="mt-4 space-y-2">
               {pkg.features.map((feature, i) => (
-                <li key={i} className="flex items-center gap-2 text-sm md:text-lg">
-                  <span className="text-blue-400 text-lg md:text-2xl">{feature.icon}</span>
+                <li key={i} className="flex items-center gap-2 text-sm md:text-lg text-gray-300">
+                  <span className="text-yellow-500 text-lg md:text-2xl">{feature.icon}</span>
                   {feature.text}
                 </li>
               ))}
@@ -104,8 +103,7 @@ const Packages = () => {
             {/* Call to Action Button */}
             <button
               onClick={handleScroll}
-              className="mt-6 w-full bg-blue-500 text-white py-3 md:py-4 rounded-full font-semibold 
-              shadow-lg transition-all hover:shadow-md hover:bg-blue-600 text-base md:text-lg"
+              className="mt-6 w-full bg-blue-700 text-white py-3 md:py-4 rounded-full font-semibold shadow-md text-base md:text-lg"
             >
               Choose Package
             </button>

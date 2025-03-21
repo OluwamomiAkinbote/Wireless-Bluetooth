@@ -6,6 +6,10 @@ import HeadsetFeature from "./HeadsetFeature";
 import ContactForm from "./ContactForm";
 import Packages from "./Packages";
 import Discover from "./Discover";
+import ImageBanner from "./ImageBanner";
+import Testimonials from "./Testimonials";
+import Footer from "./Footer";
+import Notice from "./Notice";
 
 
 const Home = () => {
@@ -16,8 +20,12 @@ const Home = () => {
       <VideoPlayer />
       <HeadsetFeature />
       <Discover />
+      <ImageBanner />
+      <Testimonials />
       <Packages />
+      <Notice />
       <ContactForm />
+      <Footer />
 
     </div>
   );

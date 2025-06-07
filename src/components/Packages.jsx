@@ -47,9 +47,14 @@ const Packages = () => {
       ],
     },
   ];
+  
+  const handleScroll = () => {
+    const section = document.getElementById("contact-us");
+    if (section) section.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
-    <section className="py-16 px-4 bg-gradient-to-r from-gray-900 to-black">
+    <section className="py-16 px-4 bg-gradient-to-r from-gray-900 to-black" id="packages">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-white mb-3">Get More, Save More</h2>
@@ -107,6 +112,7 @@ const Packages = () => {
                   ${pkg.featured 
                     ? "bg-yellow-400 hover:bg-yellow-500 text-black" 
                     : "bg-gray-700 hover:bg-gray-600 text-white"}`}
+                  onClick={handleScroll}
                 >
                   Get {pkg.name}
                 </button>

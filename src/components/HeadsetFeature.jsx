@@ -34,8 +34,13 @@ const features = [
 ];
 
 const HeadsetFeature = () => {
+  const scrollToContact = () => {
+    const section = document.getElementById("packages");
+    if (section) section.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 md:py-12 ">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 md:py-12">
       {/* Header Section */}
       <div className="text-center mb-8 md:mb-10">
         <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2 sm:mb-3">
@@ -75,7 +80,10 @@ const HeadsetFeature = () => {
         <p className="text-gray-300 text-sm sm:text-base mb-3 sm:mb-4">
           <span className="text-yellow-400 font-bold">Over 10,000+</span> Nigerians don buy and confirm say e good!
         </p>
-        <button id='contact'className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-md sm:rounded-lg text-sm sm:text-base transition-all transform hover:scale-105">
+        <button 
+          onClick={scrollToContact}
+          className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-md sm:rounded-lg text-sm sm:text-base transition-all transform hover:scale-105"
+        >
           I Want My Own Now
         </button>
       </div>

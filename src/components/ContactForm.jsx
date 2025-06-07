@@ -28,7 +28,7 @@ const ContactForm = () => {
 
   return (
     <div
-      id="order-now"
+      id="contact-us"
       className="max-w-3xl mx-auto p-4 sm:p-6 bg-gradient-to-br from-gray-900 to-gray-800 text-white shadow-xl rounded-xl border border-gray-700"
     >
       <div className="text-center mb-6">

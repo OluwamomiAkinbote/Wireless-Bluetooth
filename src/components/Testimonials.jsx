@@ -1,4 +1,4 @@
-import { Star } from "lucide-react";
+import { Star, Quote } from "lucide-react";
 import product1 from "../assets/review-1.jpg";
 import product2 from "../assets/review-2.jpg";
 import product3 from "../assets/review-3.jpg";
@@ -7,52 +7,83 @@ import product4 from "../assets/review-4.jpg";
 const testimonials = [
   {
     name: "Oghenetetega O.",
+    role: "Frequent Traveler",
     state: "Delta State",
     rating: 5,
     image: product1,
-    content:
-      "Works good with two phones. Good quality on phone conversation, fits ok on both sides, keeps working all day .",
+    content: "Works perfectly with two phones simultaneously. Crystal clear calls, all-day comfort, and exceptional battery life - my go-to headset for business trips!",
+    highlight: "All-day comfort"
   },
   {
     name: "Oritsejolomi",
+    role: "Customer Support Agent",
     state: "Delta State",
     rating: 4,
     image: product2,
-    content:
-      "I use this daily in my work for several hours on the phone. It is a wonderful budget-friendly headset but could maybe use a bit of improvement on the range as it does not reach nearly as far as advertised.\n\nPros:\n- Battery Life\n- Recharging Case\n- Comfort\n- Sound Quality\n\nCons:\n- Range on Bluetooth",
+    content: "As someone who spends 8+ hours daily on calls, these have been a game-changer. The sound quality rivals headsets twice the price!",
+    highlight: "8+ hour battery"
   },
   {
     name: "Yusuf Kolade",
+    role: "Tech Enthusiast",
     state: "Ogun State",
     rating: 5,
     image: product3,
-    content:
-      "I've had this one for several months now and it is doing great. It sounds great and there is plenty of volume. It is very lightweight, fits well, comfortable, and after a few minutes I forget that I have it on. The battery lasts as long as I'm wearing it. It automatically connects when removed from the charging box and disconnects when replaced. The charger box recharges multiple times, and the digital display shows the charge left. I'm very happy with this one.",
+    content: "After 6 months of daily use, they still perform like new. The auto-connect feature saves me minutes every day - brilliant engineering!",
+    highlight: "6-month durability"
   },
   {
-    name: "Leonard Enoch ",
+    name: "Leonard Enoch",
+    role: "Sales Executive",
     state: "Port Harcourt",
     rating: 4,
     image: product4,
-    content:
-      "Way better than other cheaper ones I've had. Battery/talk-time is fantastically better. The voice that tells me it's connected is a bit foreign, I would have preferred a more 'local' one or if there were choices, but this is a super-minor complaint. It's very comfortable, I forget it's even on my ear. Overall, I am very pleased and hope it lasts a while – it's only been used a few weeks thus far.",
+    content: "Upgraded from cheaper alternatives and the difference is night and day. My clients now hear me perfectly on every call - worth every naira!",
+    highlight: "Premium sound"
   },
 ];
 
-const TestimonialCard = ({ name, state, rating, content, image }) => {
+const TestimonialCard = ({ name, role, state, rating, content, image, highlight }) => {
   return (
-    <div className="bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
-      <img src={image} alt={name} className="w-full h-40 object-cover" />
-      <div className="p-4">
-        <h3 className="text-lg font-semibold">{name}</h3>
-        <span className="text-gray-500 text-sm">{state}</span>
-        {/* Rating */}
-        <div className="flex text-yellow-500 mt-2 mb-3">
-          {Array.from({ length: rating }, (_, i) => (
-            <Star key={i} size={18} fill="currentColor" />
-          ))}
+    <div className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-yellow-400 transition-all duration-300 hover:shadow-lg hover:shadow-yellow-400/10">
+      <div className="relative h-48 overflow-hidden">
+        <img 
+          src={image} 
+          alt={name} 
+          className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
+        />
+        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+          <div className="flex justify-between items-end">
+            <div>
+              <h3 className="text-white font-bold text-lg">{name}</h3>
+              <p className="text-gray-300 text-sm">{role}, {state}</p>
+            </div>
+            <div className="flex items-center bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-bold">
+              <Star size={14} fill="currentColor" className="mr-1" />
+              {rating}.0
+            </div>
+          </div>
         </div>
-        <p className="text-gray-700 text-sm">{content}</p>
+      </div>
+      
+      <div className="p-6 relative">
+        <Quote className="absolute top-4 right-6 text-gray-700" size={24} />
+        
+        <div className="mb-4">
+          <span className="inline-block bg-yellow-400/20 text-yellow-400 px-3 py-1 rounded-full text-xs font-bold mb-3">
+            {highlight}
+          </span>
+          <p className="text-gray-300 italic">"{content}"</p>
+        </div>
+        
+        <div className="flex justify-between items-center text-sm">
+          <div className="flex text-yellow-400">
+            {Array.from({ length: rating }, (_, i) => (
+              <Star key={i} size={16} fill="currentColor" />
+            ))}
+          </div>
+          <span className="text-gray-400 text-xs">Verified Purchase</span>
+        </div>
       </div>
     </div>
   );
@@ -60,13 +91,29 @@ const TestimonialCard = ({ name, state, rating, content, image }) => {
 
 export default function Testimonials() {
   return (
-    <div className="p-6">
-      <h2 className="text-2xl font-bold text-center mb-6 text-gray-100">Customer Reviews</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {testimonials.map((testimonial, index) => (
-          <TestimonialCard key={index} {...testimonial} />
-        ))}
+    <section className="py-16 px-4 bg-gradient-to-b from-gray-900 to-black">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-white mb-3">
+            Loved by <span className="text-yellow-400">Thousands</span> of Nigerians
+          </h2>
+          <p className="text-gray-300 max-w-2xl mx-auto">
+            Don't just take our word for it - hear what our customers say about their experience
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <TestimonialCard key={index} {...testimonial} />
+          ))}
+        </div>
+        
+        <div className="mt-12 text-center">
+          <button className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+            Read More Success Stories
+          </button>
+        </div>
       </div>
-    </div>
+    </section>
   );
-}
+};

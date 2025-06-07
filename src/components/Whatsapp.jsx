@@ -2,8 +2,8 @@ import React from "react";
 import { FaWhatsapp } from "react-icons/fa"; // Import WhatsApp icon from react-icons
 
 const WhatsApp = () => {
-  const phoneNumber = "+2349015436227"; // Change this to your WhatsApp number
-  const productName = "Wireless Bluetooth";
+  const phoneNumber = "+2348089206714"; // Change this to your WhatsApp number
+  const productName = "Wireless Bluetooth-yyk520";
 
   // WhatsApp Message
   const message = encodeURIComponent(`Hi, I'm interested in "${productName}". Can you provide more details?`);

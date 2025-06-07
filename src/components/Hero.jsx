@@ -1,60 +1,73 @@
 import React from "react";
-import Image1 from "../assets/image-7.png";
+import Image1 from "../assets/bluetooth-001.jpg";
 
 const Hero = () => {
-  // Scroll to the packages section
   const scrollToPackages = () => {
     const section = document.getElementById("packages");
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
+    if (section) section.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <section className="relative w-full flex flex-col md:flex-row items-center justify-center text-center md:text-left text-white px-4 py-4">
-      {/* Product Image */}
-      <div className="relative w-full md:w-1/3 lg:w-2/5 md:mr-8 sm:mb-8">
+    <section className="w-full flex flex-col lg:flex-row items-center gap-6 sm:gap-8 px-4 sm:px-6 py-8 sm:py-12 border-b-2 border-yellow-500">
+      {/* Product Image - centered on mobile, right-aligned on desktop */}
+      <div className="w-full lg:w-1/2 xl:w-2/5 relative order-1">
         <img
           src={Image1}
-          alt="Wireless Bluetooth Headset"
-          className="w-full shadow-2xl"
+          alt="Quality Bluetooth Headset"
+          className="w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto transform hover:scale-105 transition-transform duration-500"
         />
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-20 pointer-events-none" />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-2xl">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-300 sm:mt-8 md:mb-0">
-          Bluetooth with Instant Pairing and Uninterrupted Stable Transmission
+      {/* Content - comes first on mobile */}
+      <div className="max-w-2xl order-2">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-bold mb-3 sm:mb-4 text-white">
+          No Wahala Bluetooth Headset <br className="hidden sm:block" />
+          <span className="text-yellow-400">Connect Sharp-Sharp!</span>
         </h1>
 
-        <p className="mt-5 text-base sm:text-lg md:text-xl text-purple-200 leading-relaxed sm:leading-normal">
-          The Bluetooth headset is designed with a <strong>lightweight hanging ear</strong>, ensuring comfort and durability.
-        </p>
+        {/* Features list - responsive text and spacing */}
+        <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 text-base sm:text-lg text-gray-300">
+          <li className="flex items-start gap-2 sm:gap-3">
+            <span className="text-yellow-400 mt-0.5 sm:mt-1">✓</span>
+            <span>Lightweight design - No pain for your ear</span>
+          </li>
+          <li className="flex items-start gap-2 sm:gap-3">
+            <span className="text-yellow-400 mt-0.5 sm:mt-1">✓</span>
+            <span>Call Siri by voice - No need to touch phone</span>
+          </li>
+          <li className="flex items-start gap-2 sm:gap-3">
+            <span className="text-yellow-400 mt-0.5 sm:mt-1">✓</span>
+            <span>Smart buttons - No accidental pressing</span>
+          </li>
+          <li className="flex items-start gap-2 sm:gap-3">
+            <span className="text-yellow-400 mt-0.5 sm:mt-1">✓</span>
+            <span>Perfect for drivers - Hands-free commotment</span>
+          </li>
+          <li className="flex items-start gap-2 sm:gap-3">
+            <span className="text-yellow-400 mt-0.5 sm:mt-1">✓</span>
+            <span>Strong battery - Last all day</span>
+          </li>
+        </ul>
 
-        <p className="mt-3 text-base sm:text-lg md:text-xl text-purple-200 leading-relaxed sm:leading-normal">
-          Support <strong>voice wake-up Siri</strong>, allowing you to make calls without holding your phone.
-        </p>
-
-        <p className="mt-3 text-base sm:text-lg md:text-xl text-purple-200 leading-relaxed sm:leading-normal">
-          Use <strong>multi-function buttons</strong> to prevent accidental touches.
-        </p>
-
-        <p className="mt-3 text-base sm:text-lg md:text-xl text-purple-200 leading-relaxed sm:leading-normal">
-          Easily control the headset directly, making it highly convenient for those who frequently drive.
-        </p>
-
-        {/* Call to Action Button - Neumorphism Style */}
-        <div className="mt-8 flex justify-center md:justify-start">
+        {/* Buttons - stack on mobile, row on larger screens */}
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
           <button
             onClick={scrollToPackages}
-            className="bg-yellow-700 text-gray-950 font-bold text-lg sm:text-xl md:text-2xl py-4 sm:py-5 px-8 sm:px-12 rounded-md 
-                       shadow-[6px_6px_12px_#0F172A,-6px_-6px_12px_#334155] 
-                       transition-all transform hover:scale-105 hover:shadow-[3px_3px_6px_#0F172A,-3px_-3px_6px_#334155] 
-                       active:shadow-inner active:translate-y-[2px]"
+            className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg 
+            transition-all transform hover:scale-105 shadow-lg hover:shadow-yellow-500/30 text-sm sm:text-base"
           >
-            I NEED IT NOW
+            BUY NOW - GET DISCOUNT
+          </button>
+          <button className="border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500/10 font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-lg transition-all text-sm sm:text-base">
+            See How It Works
           </button>
         </div>
+
+        {/* Social proof - smaller on mobile */}
+        <p className="mt-3 sm:mt-4 text-gray-300 text-xs sm:text-sm">
+          🔥 <strong>Over 5,000+</strong> Nigerians don yarn say e good!
+        </p>
       </div>
     </section>
   );

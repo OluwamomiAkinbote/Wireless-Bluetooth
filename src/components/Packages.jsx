@@ -9,9 +9,9 @@ const Packages = () => {
     {
       name: "Starter",
       items: "Single Item",
-      price: "₦32,500",
+      price: "₦33,000",
       original: "₦35,000",
-      savings: "₦2,500",
+      savings: "₦2,000",
       image: Package1,
       features: [
         { icon: <FaShippingFast />, text: "Free Shipping" },
@@ -22,9 +22,9 @@ const Packages = () => {
     {
       name: "Popular",
       items: "Duo Pack",
-      price: "₦63,500",
+      price: "₦64,000",
       original: "₦70,000",
-      savings: "₦6,500",
+      savings: "₦6,000",
       featured: true,
       image: Package2,
       features: [
@@ -36,9 +36,9 @@ const Packages = () => {
     {
       name: "Premium",
       items: "Triple Pack",
-      price: "₦95,500",
+      price: "₦96,000",
       original: "₦105,000",
-      savings: "₦9,500",
+      savings: "₦9,000",
       image: Package3,
       features: [
         { icon: <FaCheckCircle />, text: "All Popular Benefits" },

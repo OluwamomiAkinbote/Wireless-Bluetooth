@@ -3,7 +3,9 @@ import { useForm, ValidationError } from "@formspree/react";
 import { User, Phone, MapPin, Send, ShoppingCart, Gift } from "lucide-react";
 
 const ContactForm = () => {
-  const [state, handleSubmit] = useForm("mjkyybkr");
+  const [state, handleSubmit] = useForm("movwdond");
+
+
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -129,8 +131,8 @@ const ContactForm = () => {
                 <input type="radio" name="package" value="BUY 1 FOR #37,000" required className="mr-2" />
                 <span className="font-medium">Single Pack</span>
               </div>
-              <div className="text-yellow-400 font-bold text-lg">₦32,500</div>
-              <div className="text-xs text-gray-400 mt-1">Save ₦2,500</div>
+              <div className="text-yellow-400 font-bold text-lg">₦33,000</div>
+              <div className="text-xs text-gray-400 mt-1">Save ₦2,000</div>
             </label>
 
             <label className="flex flex-col border border-gray-600 rounded-lg p-3 hover:border-yellow-400 cursor-pointer">
@@ -138,8 +140,8 @@ const ContactForm = () => {
                 <input type="radio" name="package" value="BUY 2 FOR #72,500" required className="mr-2" />
                 <span className="font-medium">Double Pack</span>
               </div>
-              <div className="text-yellow-400 font-bold text-lg">₦63,500</div>
-              <div className="text-xs text-gray-400 mt-1">Save ₦6,500</div>
+              <div className="text-yellow-400 font-bold text-lg">₦64,000</div>
+              <div className="text-xs text-gray-400 mt-1">Save ₦6,000</div>
             </label>
 
             <label className="flex flex-col border border-gray-600 rounded-lg p-3 hover:border-yellow-400 cursor-pointer bg-gray-700 border-yellow-400 relative">
@@ -150,8 +152,8 @@ const ContactForm = () => {
                 <input type="radio" name="package" value="BUY 3 FOR #106,000" required className="mr-2" />
                 <span className="font-medium">Triple Pack</span>
               </div>
-              <div className="text-yellow-400 font-bold text-lg">₦95,500</div>
-              <div className="text-xs text-gray-400 mt-1">Save ₦9,500</div>
+              <div className="text-yellow-400 font-bold text-lg">₦96,000</div>
+              <div className="text-xs text-gray-400 mt-1">Save ₦9,000</div>
             </label>
           </div>
         </div>
